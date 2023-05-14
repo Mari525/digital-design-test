@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  @include reset;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.change-theme {
+  width: 150px;
+  height: 40px;
+
+  background: #ffffff;
+  border-radius: 10px;
+  border: none;
+
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #b621fe;
+}

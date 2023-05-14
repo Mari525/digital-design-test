@@ -1,0 +1,18 @@
+.nav {
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
