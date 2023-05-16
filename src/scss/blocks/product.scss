@@ -1,0 +1,39 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &__img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__date {
+    font-size: 1.2rem;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 0.5em 1em;
+
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-weight: 500;
+
+    border-radius: 10px;
+    border: none;
+    background-color: #b621fe;
+    
+    &:hover {
+      background-color: #1fd1f9;
+      background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    }
+  }
+}

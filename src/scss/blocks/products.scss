@@ -1,9 +1,21 @@
 .products {
-  margin: 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em;
 
   &__heading {
+    margin-bottom: 30px;
+
     font-size: 3rem;
     text-align: center;
     letter-spacing: 0.03em;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-gap: 3em 2em;
   }
 }

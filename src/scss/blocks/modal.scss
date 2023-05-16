@@ -1,0 +1,102 @@
+.modal {
+  display: none;
+  width: 300px;
+  padding: 2em;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  background-color: #ffffff;
+
+  border: 1px solid #000000;
+  border-radius: 10px;
+
+  &--opened {
+    display: flex;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__close-btn {
+    width: 30px;
+    height: 30px;
+
+    align-self: flex-end;
+
+    color: #ffffff;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    border: none;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #1fd1f9;
+      background-image: linear-gradient(315deg, #b621fe 0%, #1fd1f9 74%);
+    }
+  }
+
+  &__count {
+    width: 90px;
+    height: 30px;
+    padding-left: 15px;
+
+    align-self: flex-start;
+
+    border-radius: 10px;
+    border: 1px solid #b621fe;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__item {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__radio {
+    margin-right: 10px;
+  }
+
+  &__textarea {
+    padding: 1em;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #b621fe;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  }
+
+  &__buy-btn {
+    height: 40px;
+
+    border: none;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.6rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+
+    &:hover {
+      background-color: #1fd1f9;
+      background-image: linear-gradient(315deg, #b621fe 0%, #1fd1f9 74%);
+    }
+  }
+}

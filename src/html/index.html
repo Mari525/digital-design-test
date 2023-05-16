@@ -11,7 +11,10 @@
   <title>Shop</title>
 </head>
 
-<body>
+<body class="body" id="body">
+
+  <div class="overlay" id="overlay"></div>
+
   <header class="header">
     <div class="header__wrapper">
       <!-- svg -->
@@ -19,13 +22,13 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link">Одежда</a>
+            <a href="#clothes" class="nav__link">Одежда</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Обувь</a>
+            <a href="#shoes" class="nav__link">Обувь</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Аксессуары</a>
+            <a href="#accessories" class="nav__link">Аксессуары</a>
           </li>
         </ul>
       </nav>
@@ -37,38 +40,95 @@
   </header>
 
   <main class="main" id="main">
-    <section class="products" id="products"></section>
 
-    <!-- <section class="modal">
+    <section class="modal" id="modal">
       <form action="" class="modal__form">
-        <button class="modal__close-btn" id="close-btn">
-          svg
+        <button class="modal__close-btn" id="close-btn" type="button">
+          Х
         </button>
-        <input class="modal__count" type="text">
+        <p class="modal__text">Выберите количество:</p>
+        <input 
+          class="modal__count" 
+          id="modal-count" 
+          type="number" 
+          min="1" 
+          step="1" 
+          value="1"
+        >
+        <p class="modal__text">Выберите цвет:</p>
         <ul class="modal__radios">
-          <li class="modal__item"><input type="text" class="modal__radio"></li>
-          <li class="modal__item"><input type="text" class="modal__radio"></li>
-          <li class="modal__item"><input type="text" class="modal__radio"></li>
-          <li class="modal__item"><input type="text" class="modal__radio"></li>
+          <li class="modal__item">
+            <input 
+              type="radio"
+              class="modal__radio"
+              name="modal-radio"
+              id="black"
+              value="black"
+              >
+            <label for="black">Черный</label>
+          </li>
+          <li class="modal__item">
+            <input 
+              type="radio"
+              class="modal__radio"
+              name="modal-radio"
+              id="white"
+              value="white"
+              >
+            <label for="white">Белый</label>
+          </li>
+          <li class="modal__item">
+            <input 
+              type="radio"
+              class="modal__radio"
+              name="modal-radio"
+              id="gray"
+              value="gray"
+              >
+            <label for="gray">Серый</label>
+          </li>
+          <li class="modal__item">
+            <input 
+              type="radio"
+              class="modal__radio"
+              name="modal-radio"
+              id="blue"
+              value="blue"
+              >
+            <label for="blue">Синий</label>
+          </li>
         </ul>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button class="modal__buy-btn" id="buy-btn">
-          svg
+        <textarea 
+          class="modal__textarea" 
+          name="" 
+          id="" 
+          cols="30" 
+          rows="8"
+          maxlength='2000'
+          placeholder="Комментарий (необязательно)  "></textarea>
+        <button class="modal__buy-btn" id="buy-btn" type="button">
           Купить
         </button>
       </form>
-    </section> -->
+    </section>
+
+    <section class="products" id="products"></section>
+    
   </main>
 
-  <!-- <footer class="footer">
+  <footer class="footer">
     <ul class="footer__nav">
-      <li class="footer__category">
-        <a href="" class="footer__link"></a>
+      <li>
+        <a href="#clothes" class="footer__link">Одежда</a>
+      </li>
+      <li>
+        <a href="#shoes" class="footer__link">Обувь</a>
+      </li>
+      <li>
+        <a href="#accessories" class="footer__link">Аксессуары</a>
       </li>
     </ul>
-  </footer> -->
-
-  <!-- <script src="./js/bundle.js" type= "module"></script> -->
+  </footer>
 
 </body>
 
