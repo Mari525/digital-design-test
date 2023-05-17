@@ -7,6 +7,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -20,6 +21,7 @@ ul {
 button {
   cursor: pointer;
 }
+
 
 .body {
   position: relative;
@@ -49,14 +51,43 @@ button {
 }
 
 .change-theme {
-  width: 150px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 
-  background: #ffffff;
+  background: none;
   border-radius: 10px;
   border: none;
 
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  color: #b621fe;
+
+  &__icon {
+    height: 90%;
+    border-radius: 10px;
+  }
+}
+
+.up-btn {
+  width: 60px;
+  height: 60px;
+
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+
+  background-color: #b621fe;
+  border: none;
+  border-radius: 50%;
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  }
+
+  &--show {
+    opacity: 1;
+  }
 }

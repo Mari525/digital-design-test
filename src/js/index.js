@@ -5,14 +5,20 @@ const closeBtn = document.getElementById('close-btn')
 const overlay = document.getElementById('overlay')
 const body = document.getElementById('body')
 const buyBtn = document.getElementById('buy-btn')
-const modalCount = document.getElementById('modal-count')
 const modalRadios = document.querySelectorAll('.modal__radio')
+const changeThemeBtn = document.getElementById('change-theme-btn')
+const upBtn = document.getElementById('up-btn')
 
 closeBtn.addEventListener('click', closeModal)
 overlay.addEventListener('click', closeModal)
 buyBtn.addEventListener('click', handleBuyBtnClick)
+changeThemeBtn.addEventListener('click', changeTheme)
+window.addEventListener("scroll", trackScroll)
+upBtn.addEventListener('click', handleUpBtnClick)
 
 function closeModal() {
+  const modalCount = document.getElementById('modal-count')
+
   modal.classList.remove('modal--opened')
   overlay.classList.remove('overlay__show')
   body.classList.remove('body__scroll')
@@ -33,11 +39,32 @@ function handleBuyBtnClick() {
   if (isChecked) {
     window.alert("Покупка совершена!")
     closeModal()
-  }
+  } 
   else {
     window.alert("Пожалуйста, выберите цвет")
   }
+}
 
+function changeTheme() {
+  const modal = document.getElementById('modal')
+  body.classList.toggle('body--dark')
+  modal.classList.toggle('modal--dark')
+}
+
+function trackScroll() {
+  if (window.pageYOffset > 100) {
+    upBtn.classList.add('up-btn--show');
+  } 
+  else {
+    upBtn.classList.remove('up-btn--show');
+  }
+}
+
+function handleUpBtnClick() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
 function getDayName(number) {

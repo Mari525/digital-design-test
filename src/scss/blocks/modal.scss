@@ -9,6 +9,9 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 
+  opacity: 0;
+  animation: ani 1s forwards;
+
   background-color: #ffffff;
 
   border: 1px solid #000000;
@@ -16,6 +19,12 @@
 
   &--opened {
     display: flex;
+  }
+
+  &--dark {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 2px solid #ffffff;
   }
 
   &__form {
@@ -29,6 +38,10 @@
     height: 30px;
 
     align-self: flex-end;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     color: #ffffff;
     background-color: #1fd1f9;
@@ -74,8 +87,10 @@
   &__textarea {
     padding: 1em;
     resize: none;
+
     border-radius: 10px;
     border: 1px solid #b621fe;
+
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   }
 
@@ -99,4 +114,9 @@
       background-image: linear-gradient(315deg, #b621fe 0%, #1fd1f9 74%);
     }
   }
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

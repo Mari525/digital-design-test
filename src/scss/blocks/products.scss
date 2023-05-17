@@ -18,4 +18,10 @@
     grid-template-columns: repeat(auto-fill, 150px);
     grid-gap: 3em 2em;
   }
+
+  @media (max-width:400px) {
+    &__list {
+      justify-content: center;
+    }
+  }
 }
