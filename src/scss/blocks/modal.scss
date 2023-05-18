@@ -63,7 +63,10 @@
     align-self: flex-start;
 
     border-radius: 10px;
-    border: 1px solid #b621fe;
+    border: 2px solid #b621fe;
+
+    background-color: inherit;
+    color: inherit;
   }
 
   &__text {
@@ -89,9 +92,12 @@
     resize: none;
 
     border-radius: 10px;
-    border: 1px solid #b621fe;
+    border: 2px solid #b621fe;
 
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+    background-color: inherit;
+    color: inherit;
   }
 
   &__buy-btn {

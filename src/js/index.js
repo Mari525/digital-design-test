@@ -18,6 +18,7 @@ upBtn.addEventListener('click', handleUpBtnClick)
 
 function closeModal() {
   const modalCount = document.getElementById('modal-count')
+  const modalTextarea = document.getElementById('modal-textarea')
 
   modal.classList.remove('modal--opened')
   overlay.classList.remove('overlay__show')
@@ -27,6 +28,7 @@ function closeModal() {
   modalRadios.forEach(function(radio) {
     radio.checked = false
   })
+  modalTextarea.value = ""
 }
 
 function handleBuyBtnClick() {
