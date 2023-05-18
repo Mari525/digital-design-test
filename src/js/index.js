@@ -13,7 +13,7 @@ closeBtn.addEventListener('click', closeModal)
 overlay.addEventListener('click', closeModal)
 buyBtn.addEventListener('click', handleBuyBtnClick)
 changeThemeBtn.addEventListener('click', changeTheme)
-window.addEventListener("scroll", trackScroll)
+window.addEventListener('scroll', trackScroll)
 upBtn.addEventListener('click', handleUpBtnClick)
 
 function closeModal() {
