@@ -3,7 +3,7 @@
 export const productsData = [
   {
     heading: "Толстовка",
-    date: "01.28.2023",
+    date: "03.05.2023",
     img: "hoody",
     category: "clothes",
   },

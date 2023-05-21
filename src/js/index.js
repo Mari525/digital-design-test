@@ -77,15 +77,15 @@ function getDayName(number) {
 }
 
 function getWeekNumber(date) {
-  const yearStart = new Date(date.getFullYear(), 0, 1);
-  const diff = (date - yearStart) / (1000 * 60 * 60 * 24);
-  const weekNumber = Math.ceil((diff + yearStart.getDay() + 1) / 7);
+  const	dayOfMonth = date.getDate()
+  const dayOfWeek = date.getDay()
+  let weekNumber = Math.ceil((dayOfMonth - 1 - dayOfWeek) / 7);
 
-  if (date.getDay() === 0) {
-    return weekNumber;
+  if (dayOfWeek === 0) {
+    return weekNumber
   }
   else {
-    return weekNumber + 1;
+    return weekNumber + 1
   }
 }
 

@@ -91,4 +91,8 @@ button {
   &--show {
     opacity: 1;
   }
+
+  @media (max-width: 550px) {
+    right: 20px;
+  }
 }
