@@ -88,6 +88,7 @@
   }
 
   &__textarea {
+    width: 100%;
     padding: 1em;
     resize: none;
 
@@ -102,6 +103,7 @@
 
   &__buy-btn {
     height: 40px;
+    width: 100%;
 
     border: none;
     border-radius: 10px;
