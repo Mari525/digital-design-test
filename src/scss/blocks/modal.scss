@@ -2,7 +2,6 @@
   display: none;
   width: 300px;
   padding: 2em;
-  overflow-y: auto;
 
   position: fixed;
   top: 50%;
@@ -36,6 +35,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  @media (max-width: 550px) {
+    &__form {
+      gap: 10px;
+    }
   }
 
   &__close-btn {
